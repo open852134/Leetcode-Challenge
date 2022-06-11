@@ -3,12 +3,13 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
+var twoSum = function (nums, target) {
   const result = [];
 
   for (let i = 0; i < nums.length; i++) {
+    //O(n)
     let tResult = target - nums[i];
-    let tIntex = nums.indexOf(tResult);
+    let tIntex = nums.indexOf(tResult); //O(n)
     if (tIntex !== -1 && tIntex !== i) {
       result.push(i);
       result.push(tIntex);
