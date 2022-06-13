@@ -1,5 +1,5 @@
 ### <problem name>
 
-### <sample description>
+### Sample
 
-### <note>
+### Note
