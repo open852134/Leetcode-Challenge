@@ -2,39 +2,24 @@
  * @param {string} s
  * @return {string}
  */
-var longestPalindrome = function(s) {
+var longestPalindrome = function (s) {
   let result = "";
-  let centerIndex = 0;
 
-  for (let i = 1; i < s.length; i++) {
-    let currentChat = s[i];
-    let leftChat = s[i - 1];
-    let rightChat = s[i + 1];
-
-    if (
-      leftChat === rightChat ||
-      leftChat === currentChat ||
-      rightChat === currentChat
-    ) {
-      centerIndex = i;
-      break;
-      // result = `${leftChat}${currentChat}${rightChat}`;
-    }
-
-    // if () {
-    //   centerIndex = i;
-    //   result = `${leftChat}${currentChat}`;
-    // }
-
-    // if (rightChat === currentChat) {
-    //   centerIndex = i;
-    //   result = `${leftChat}${rightChat}`;
-    // }
+  if (s.length <= 1) {
+    return s;
   }
 
-  // while(){
+  for (let i = 0; i < s.length; i++) {
+    for (let j = i + 1; j <= s.length; j++) {
+      const string = s.slice(i, j);
 
-  // }
+      if (string === string.split("").reverse().join("") && string.length > result.length) {
+        result = string;
+      }
+
+      console.log("string", s[i], string);
+    }
+  }
 
   return result;
 };

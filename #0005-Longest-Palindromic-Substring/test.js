@@ -1,43 +1,56 @@
 const longestPalindrome = require("./index");
 
-test("input: [babad] should be return [bab]", () => {
-  const input = "babad";
-  const expectResult = "aba";
+describe("longestPalindrome", () => {
+  test("input: [babad] should be return [bab]", () => {
+    const input = "babad";
+    const expectResult1 = "aba";
+    const expectResult2 = "bab";
 
-  expect(longestPalindrome(input)).toEqual(expectResult);
-});
+    const result = longestPalindrome(input);
 
-test("input: [cbbd] should be return [bb]", () => {
-  const input = "cbbd";
-  const expectResult = "bb";
+    expect(result === expectResult1 || result === expectResult2).toEqual(true);
+  });
 
-  expect(longestPalindrome(input)).toEqual(expectResult);
-});
+  test("input: [cbbd] should be return [bb]", () => {
+    const input = "cbbd";
+    const expectResult = "bb";
 
-test("input: [bbgghh] should be return [bbgghh]", () => {
-  const input = "bbgghh";
-  const expectResult = "bbgghh";
+    expect(longestPalindrome(input)).toEqual(expectResult);
+  });
 
-  expect(longestPalindrome(input)).toEqual(expectResult);
-});
+  test("input: [bbgghh] should be return [bbgghh]", () => {
+    const input = "bbgghh";
+    const expectResult1 = "bb";
+    const expectResult2 = "gg";
+    const expectResult3 = "hh";
 
-test("input: [a] should be return [a]", () => {
-  const input = "a";
-  const expectResult = "a";
+    const result = longestPalindrome(input);
 
-  expect(longestPalindrome(input)).toEqual(expectResult);
-});
+    expect(
+      result === expectResult1 || result === expectResult2 || result === expectResult3
+    ).toEqual(true);
+  });
 
-test("input: [aa] should be return [aa]", () => {
-  const input = "aa";
-  const expectResult = "aa";
+  test("input: [a] should be return [a]", () => {
+    const input = "a";
+    const expectResult = "a";
 
-  expect(longestPalindrome(input)).toEqual(expectResult);
-});
+    expect(longestPalindrome(input)).toEqual(expectResult);
+  });
 
-test("input: [ac] should be return [ac]", () => {
-  const input = "ac";
-  const expectResult = "ac";
+  test("input: [aa] should be return [aa]", () => {
+    const input = "aa";
+    const expectResult = "aa";
 
-  expect(longestPalindrome(input)).toEqual(expectResult);
+    expect(longestPalindrome(input)).toEqual(expectResult);
+  });
+
+  test("input: [ac] should be return [ac]", () => {
+    const input = "ac";
+    const expectResult = "a";
+
+    expect(longestPalindrome(input)).toEqual(expectResult);
+  });
+
+  test('input: ["zudfweormatjycujjirzjpyrmaxurectxrtqedmmgergwdvjmjtstdhcihacqnothgttgqfywcpgnuvwglvfiuxteopoyizgehkwuvvkqxbnufkcbodlhdmbqyghkojrgokpwdhtdrwmvdegwycecrgjvuexlguayzcammupgeskrvpthrmwqaqsdcgycdupykppiyhwzwcplivjnnvwhqkkxildtyjltklcokcrgqnnwzzeuqioyahqpuskkpbxhvzvqyhlegmoviogzwuiqahiouhnecjwysmtarjjdjqdrkljawzasriouuiqkcwwqsxifbndjmyprdozhwaoibpqrthpcjphgsfbeqrqqoqiqqdicvybzxhklehzzapbvcyleljawowluqgxxwlrymzojshlwkmzwpixgfjljkmwdtjeabgyrpbqyyykmoaqdambpkyyvukalbrzoyoufjqeftniddsfqnilxlplselqatdgjziphvrbokofvuerpsvqmzakbyzxtxvyanvjpfyvyiivqusfrsufjanmfibgrkwtiuoykiavpbqeyfsuteuxxjiyxvlvgmehycdvxdorpepmsinvmyzeqeiikajopqedyopirmhymozernxzaueljjrhcsofwyddkpnvcvzixdjknikyhzmstvbducjcoyoeoaqruuewclzqqqxzpgykrkygxnmlsrjudoaejxkipkgmcoqtxhelvsizgdwdyjwuumazxfstoaxeqqxoqezakdqjwpkrbldpcbbxexquqrznavcrprnydufsidakvrpuzgfisdxreldbqfizngtrilnbqboxwmwienlkmmiuifrvytukcqcpeqdwwucymgvyrektsnfijdcdoawbcwkkjkqwzffnuqituihjaklvthulmcjrhqcyzvekzqlxgddjoir"] should be [gykrkyg]', () => {});
 });
