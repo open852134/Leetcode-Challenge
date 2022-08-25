@@ -15,5 +15,5 @@ test("input: [0,0,1,1,1,2,2,3,3,4] should be return length = 5", () => {
 test("input: [0,1,2,2,3,4,5,6,6,6] should be return length = 6", () => {
   const dataSource = [0, 1, 2, 2, 3, 4, 5, 6, 6, 6];
 
-  expect(removeDuplicates(dataSource)).toEqual(6);
+  expect(removeDuplicates(dataSource)).toEqual(7);
 });
