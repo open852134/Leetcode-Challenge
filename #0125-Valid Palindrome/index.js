@@ -2,20 +2,12 @@
  * @param {string} s
  * @return {boolean}
  */
-var isPalindrome = function(s) {
+var isPalindrome = function (s) {
   if (!s.trim()) return true;
 
-  s = s
-    .trim()
-    .replace(/[\W_]/g, "")
-    .toLowerCase();
-  if (
-    s ==
-    s
-      .split("")
-      .reverse()
-      .join("")
-  ) {
+  s = s.trim().replace(/[\W_]/g, "").toLowerCase();
+
+  if (s == s.split("").reverse().join("")) {
     return true;
   } else {
     return false;
