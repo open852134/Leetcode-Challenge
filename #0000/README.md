@@ -1,5 +1,11 @@
-### <problem name>
+# Question Title
 
-### <sample description>
+## Sample Case
 
-### <note>
+## Note
+
+> Solution
+
+> Time complexity
+
+> Edge Case

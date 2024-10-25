@@ -1,5 +1,0 @@
-### <problem name>
-
-### Sample
-
-### Note
