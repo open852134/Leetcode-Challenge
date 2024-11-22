@@ -5,25 +5,25 @@
 var decodeString = function (s) {
   let stack = [],
     currStr = "",
-    currDig = "";
+    currMultiply = "";
 
-  for (let i of s) {
-    if (i === "[") {
+  for (let char of s) {
+    if (char === "[") {
       stack.push(currStr);
-      stack.push(currDig);
+      stack.push(currMultiply);
       currStr = "";
-      currDig = "";
-    } else if (i === "]") {
+      currMultiply = "";
+    } else if (char === "]") {
       let prevDig = stack.pop();
       let prevStr = stack.pop();
 
       currStr = prevStr + currStr.repeat(parseInt(prevDig));
-    } else if (!isNaN(i)) {
-      currDig += i;
+    } else if (!isNaN(char)) {
+      currMultiply += char;
     } else {
-      currStr += i;
+      currStr += char;
     }
-    console.log({ i, currStr, currDig, stack });
+    console.log({ char, currStr, currMultiply, stack });
   }
   return currStr;
 };

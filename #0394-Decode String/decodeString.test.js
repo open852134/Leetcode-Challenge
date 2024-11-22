@@ -40,4 +40,10 @@ describe("decodeString", () => {
       "saavvxoxoxozzpvvxoxoxozzpvvxoxoxozzpsaavvxoxoxozzpvvxoxoxozzpvvxoxoxozzps"
     );
   });
+
+  test("input '2[4]' should return asabcabccdcdcdef", () => {
+    const result = decodeString("2[4]");
+
+    expect(result).toEqual("");
+  });
 });
